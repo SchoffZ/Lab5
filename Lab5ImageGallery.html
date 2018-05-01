@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="BootStrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+            <link href="css/Lab5CSS.css" rel="stylesheet" media="screen">
+            <link href="css/Lab5PrintCSS.css" rel="stylesheet" media="print">
+            <title>Midwest Photo Gallery</title>
+            <meta charset="utf-8">
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.j"</script>
+            <script>
+            $(document).ready(function(){
+            $('#gallery a').hover(function(){
+            var galleryHref = $(this).attr('href');
+            var galleryAlt = $(this).attr('title');
+            $('figure img').attr({ src: galleryHref, alt: galleryAlt });
+            $('figcaption').html(galleryAlt);
+            });
+            });
+            </script>
+        </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Lab5Home.html">Home</a></li>
+            <li><a href="Lab5Michigan.html">Michigan</a></li>
+            <li><a href="Lab5Chicago.html">Chicago</a></li>
+            <li><a href="Lab5Toronto.html">Toronto</a></li>
+        </ul>
+    </nav>
+    <div id="main">
+        <div id="gallery">
+            <ul>
+                <li>
+                    <a href="Images/Detroit1.jpg"  title="Arial View of Detroit"><img src="Images/Detroit1.jpg" width="100" height="75"  alt="Arial View of Detroit"></a>
+                </li>
+                <li>
+                    <a href="Images/Detroit2.jpg" title="Joe Lewis' Fist"><img src="Images/Detroit2.jpg" width="100" height="75" alt="Joe Lewis' Fist"></a>  
+                </li>
+                <li>
+                    <a href="Images/Chicago1.jpg" title="The Bean"><img src="Images/Chicago1.jpg" width="100" height="75" alt="The Bean"></a>
+                </li>
+                <li>
+                    <a href="Images/Chicago2.jpg" title="Arial View of Chicago"><img src="Images/Chicago2.jpg" width="100" height="75" alt="Arial View of Chicago"></a>
+                </li>
+                <li>
+                    <a href="Images/Toronto1.jpg" title="Arial View of Toronto"><img src="Images/Toronto1.jpg" width="100" height="75" alt="Arial View of Toronto"></a>
+                </li>
+                <li>
+                    <a href="Images/Toronto2.jpg" title="Toronto Sign"><img src="Images/Toronto2.jpg" width="100" height="75" alt="Toronto Sign"></a>
+                </li>
+            </ul>
+            <img src="Images/Detroit1.jpg" width="400" height="300" alt="Arial View of Detroit">
+        </div>
+    </div>
+    <script src="Scripts/Lab5Script.js"></script>
+</body>
+</html>
